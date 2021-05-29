@@ -1,11 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-
-
-const Links = [
+const URLS = [
     {to: '/', text: "Home"},
-    {to: '/starred', text: "Starred"},
+    {to: '/starred', text: "Starred"}
 ]
 
 const Nav = () => {
@@ -13,7 +11,7 @@ const Nav = () => {
         <div>
             <ul>
                 {
-                    Links.map((link)=><li><Link key={link.to} to={Link.to}>{link.text}</Link></li>)
+                    URLS.map((URL)=><li key={URL.to}><Link to={URL.to}>{URL.text}</Link></li>)
                 }
             </ul>
         </div>

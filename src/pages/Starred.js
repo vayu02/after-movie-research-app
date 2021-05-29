@@ -1,10 +1,11 @@
 import React from 'react'
+import Mainlayout from '../components/Mainlayout'
 
 const Starred = () => {
     return (
-        <div>
+        <Mainlayout >
             this is starred
-        </div>
+        </Mainlayout>
     )
 }
 
