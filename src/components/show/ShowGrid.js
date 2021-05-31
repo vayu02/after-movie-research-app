@@ -1,10 +1,11 @@
 import React from 'react'
 import ShowCard from './ShowCard'
 import IMAGE_NOT_FOUND from '../../images/not-found.png'
+import {DivLay} from '../Styled'
 
 const ShowGrid = ({data}) => {
     return (
-        <div>
+        <DivLay>
             {
                 data.map(({show}) => 
                 <ShowCard 
@@ -14,7 +15,7 @@ const ShowGrid = ({data}) => {
                 image={show.image ? show.image.medium :IMAGE_NOT_FOUND } 
                 summary={show.summary}/>)
             }
-        </div>
+        </DivLay>
     )
 }
 
