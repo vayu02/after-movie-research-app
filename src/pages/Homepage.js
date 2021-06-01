@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
 import ActorGrid from '../components/artists/ActorGrid';
+import CustomRd from '../components/CustomRd';
 import Mainlayout from '../components/Mainlayout'
 import ShowGrid from '../components/show/ShowGrid';
 import {getApi} from '../msc/Configapi'
 import { useLastQuery } from '../msc/CustomHook';
+import { SearchInpt, RadioInptWrap, SearchBtnWrap } from './Homepage.styles';
 
 
 const Homepage = () => {
@@ -16,14 +18,12 @@ const Homepage = () => {
 
     const chechInput = (ev) => {
         setinput(ev.target.value)
-        // console.log(ev.target.value)
     }
 
     const doSearch = () => {
         getApi(`/search/${radioOpt}?q=${input}`)
         .then(res => {
             setresult(res);
-            // console.log(res);
         });
     }
 
@@ -39,7 +39,6 @@ const Homepage = () => {
 
     const displayResult = () =>{
         if(result && result.length === 0 ){
-            //when user search gibberish and api send no value
             <div>Nothing To Show</div>
         }
         if(result && result.length > 0){
@@ -52,28 +51,38 @@ const Homepage = () => {
 
     return (
         <Mainlayout>
-            <input type="text" 
+            <SearchInpt type="text" 
             placeholder="Search Movie or Actor"
             onChange={chechInput} 
             value={input} 
             onKeyDown={mapKey} />
 
-            <div>
-                <label htmlFor='search-show'>
-                    Shows 
-                    <input id="search-show" type='radio' value='shows' checked={isShow} onChange={onRadChange}  ></input>
-                    </label>
-                <label htmlFor='actor-search'>
-                    Actors 
-                    <input id="actor-search" type="radio" value='people' checked={!isShow} onChange={onRadChange} >
-                        </input>
-                </label>
-            </div>
+            <RadioInptWrap>
+                <div>
+                    <CustomRd 
+                    label="Shows"
+                    id="shows-search" 
+                    value='shows' 
+                    checked={isShow}
+                    onChange={onRadChange}/>
+                </div>
+                <div>
+                    <CustomRd 
+                    label="Actors"
+                    id="actors-search" 
+                    value="people" 
+                    checked={!isShow} 
+                    onChange={onRadChange}/>
+                </div>
+            </RadioInptWrap>
 
-            <button 
-            type='button' 
-            onClick={doSearch} >Search</button>
-
+            <SearchBtnWrap>
+                <button 
+                type='button' 
+                onClick={doSearch}>
+                    Search
+                </button>
+            </SearchBtnWrap>
             {displayResult()}
         </Mainlayout>
         
