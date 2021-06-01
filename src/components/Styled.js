@@ -6,11 +6,11 @@ export const DivLay = styled.div`
     flex-wrap: wrap;
 `
 export const Search = styled.div `
-    width: 300px;
+    width: 280px;
     height: 100%;
     margin: 0 15px 40px;
 
-.img-wrapper {
+.img-wrap {
     width: 100%;
     border-radius: 40px;
     height: 420px;
@@ -32,4 +32,5 @@ h1 {
 p {
     margin: 0;
 }
+
 `
