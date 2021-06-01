@@ -5,6 +5,8 @@ import ShowMain from '../components/show/ShowMain'
 import React, {useEffect, useReducer} from 'react'
 import {useParams} from 'react-router-dom'
 import { getApi } from '../msc/Configapi'
+import { ShowPageWrapper } from './Show.Styles'
+import { Info } from './Show.Styles'
 
 const reducer = (prevState, action) =>{
     switch(action.type){
@@ -51,25 +53,25 @@ const Showpage = () => {
         return <div>Error occured : {prob}</div>
     }
 
-    return <div> 
+    return (
+        <ShowPageWrapper> 
         <ShowMain image={show.image} name={show.name} rating={show.rating} summary={show.summary} tags={show.genres} />
         <div>
             <h2>Details</h2>
             <Details status={show.status} network={show.network} premiered={show.premiered} />
         </div>
 
-        <div>
+        <Info>
             <h2>Seasons</h2>
             <Seasons seasons={show._embedded.seasons} />
-        </div>
+        </Info>
 
         <div>
             <h2>Casts</h2>
             <Casts cast={show._embedded.cast} />
         </div>
-        
-        
-        </div>
+        </ShowPageWrapper>
+    )
 }
 
 export default Showpage
