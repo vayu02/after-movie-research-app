@@ -1,3 +1,7 @@
+import Casts from '../components/show/Casts'
+import Details from '../components/show/Details'
+import Seasons from '../components/show/Seasons'
+import ShowMain from '../components/show/ShowMain'
 import React, {useEffect, useReducer} from 'react'
 import {useParams} from 'react-router-dom'
 import { getApi } from '../msc/Configapi'
@@ -40,8 +44,6 @@ const Showpage = () => {
         }
     }, [id])
 
-    console.log(show)
-
     if(isLoad){
         return <div>Getting Data</div>
     }
@@ -49,7 +51,25 @@ const Showpage = () => {
         return <div>Error occured : {prob}</div>
     }
 
-    return <div> show page</div>
+    return <div> 
+        <ShowMain image={show.image} name={show.name} rating={show.rating} summary={show.summary} tags={show.genres} />
+        <div>
+            <h2>Details</h2>
+            <Details status={show.status} network={show.network} premiered={show.premiered} />
+        </div>
+
+        <div>
+            <h2>Seasons</h2>
+            <Seasons seasons={show._embedded.seasons} />
+        </div>
+
+        <div>
+            <h2>Casts</h2>
+            <Casts cast={show._embedded.cast} />
+        </div>
+        
+        
+        </div>
 }
 
 export default Showpage
