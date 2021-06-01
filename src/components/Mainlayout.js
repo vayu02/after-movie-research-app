@@ -7,7 +7,7 @@ const Mainlayout = ({children}) => {
         <div>
             <AppName 
             title="After Movie Research" 
-            subtitle="Finding for some extra info of your fav actor or show" />
+            subtitle="Finding some Extra Info of your Fav Actor or Show" />
             <Nav />
             {children}
         </div>
