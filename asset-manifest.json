@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/after-movie-research-app/static/css/main.738ee1f4.chunk.css",
-    "main.js": "/after-movie-research-app/static/js/main.9e2cfeb9.chunk.js",
-    "main.js.map": "/after-movie-research-app/static/js/main.9e2cfeb9.chunk.js.map",
+    "main.js": "/after-movie-research-app/static/js/main.fa240313.chunk.js",
+    "main.js.map": "/after-movie-research-app/static/js/main.fa240313.chunk.js.map",
     "runtime-main.js": "/after-movie-research-app/static/js/runtime-main.a54a0cda.js",
     "runtime-main.js.map": "/after-movie-research-app/static/js/runtime-main.a54a0cda.js.map",
-    "static/js/2.73fe11ab.chunk.js": "/after-movie-research-app/static/js/2.73fe11ab.chunk.js",
-    "static/js/2.73fe11ab.chunk.js.map": "/after-movie-research-app/static/js/2.73fe11ab.chunk.js.map",
+    "static/js/2.4e9694e8.chunk.js": "/after-movie-research-app/static/js/2.4e9694e8.chunk.js",
+    "static/js/2.4e9694e8.chunk.js.map": "/after-movie-research-app/static/js/2.4e9694e8.chunk.js.map",
     "static/js/3.a161ac81.chunk.js": "/after-movie-research-app/static/js/3.a161ac81.chunk.js",
     "static/js/3.a161ac81.chunk.js.map": "/after-movie-research-app/static/js/3.a161ac81.chunk.js.map",
     "index.html": "/after-movie-research-app/index.html",
     "static/css/main.738ee1f4.chunk.css.map": "/after-movie-research-app/static/css/main.738ee1f4.chunk.css.map",
-    "static/js/2.73fe11ab.chunk.js.LICENSE.txt": "/after-movie-research-app/static/js/2.73fe11ab.chunk.js.LICENSE.txt"
+    "static/js/2.4e9694e8.chunk.js.LICENSE.txt": "/after-movie-research-app/static/js/2.4e9694e8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a54a0cda.js",
-    "static/js/2.73fe11ab.chunk.js",
+    "static/js/2.4e9694e8.chunk.js",
     "static/css/main.738ee1f4.chunk.css",
-    "static/js/main.9e2cfeb9.chunk.js"
+    "static/js/main.fa240313.chunk.js"
   ]
 }
