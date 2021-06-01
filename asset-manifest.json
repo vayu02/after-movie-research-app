@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/after-movie-research-app/static/css/main.738ee1f4.chunk.css",
-    "main.js": "/after-movie-research-app/static/js/main.ff8747f7.chunk.js",
-    "main.js.map": "/after-movie-research-app/static/js/main.ff8747f7.chunk.js.map",
+    "main.js": "/after-movie-research-app/static/js/main.ae7f418e.chunk.js",
+    "main.js.map": "/after-movie-research-app/static/js/main.ae7f418e.chunk.js.map",
     "runtime-main.js": "/after-movie-research-app/static/js/runtime-main.a54a0cda.js",
     "runtime-main.js.map": "/after-movie-research-app/static/js/runtime-main.a54a0cda.js.map",
     "static/js/2.4e9694e8.chunk.js": "/after-movie-research-app/static/js/2.4e9694e8.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a54a0cda.js",
     "static/js/2.4e9694e8.chunk.js",
     "static/css/main.738ee1f4.chunk.css",
-    "static/js/main.ff8747f7.chunk.js"
+    "static/js/main.ae7f418e.chunk.js"
   ]
 }
