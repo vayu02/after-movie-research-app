@@ -3,11 +3,12 @@ import ActorGrid from '../components/artists/ActorGrid';
 import Mainlayout from '../components/Mainlayout'
 import ShowGrid from '../components/show/ShowGrid';
 import {getApi} from '../msc/Configapi'
+import { useLastQuery } from '../msc/CustomHook';
 
 
 const Homepage = () => {
 
-    const [input, setinput] = useState('');
+    const [input, setinput] = useLastQuery();
     const [result, setresult] = useState(null);
     const [radioOpt, setradioOPt] = useState('shows');
 

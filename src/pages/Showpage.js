@@ -1,51 +1,17 @@
+import React from 'react'
 import Casts from '../components/show/Casts'
 import Details from '../components/show/Details'
 import Seasons from '../components/show/Seasons'
 import ShowMain from '../components/show/ShowMain'
-import React, {useEffect, useReducer} from 'react'
 import {useParams} from 'react-router-dom'
-import { getApi } from '../msc/Configapi'
 import { ShowPageWrapper } from './Show.Styles'
 import { Info } from './Show.Styles'
-
-const reducer = (prevState, action) =>{
-    switch(action.type){
-        case 'SUCESS_FETCH':{
-            return{ isLoad:false, prob:null, show: action.show}
-        }
-        case 'FAILED_FETCH' : {
-            return{...prevState, ifLoad:false, error: action.error}
-        }
-        default: return prevState
-    }
-}
-
-const initialState = {
-    show : null, 
-    isLoad : true,
-    prob : null,
-}
+import { useShow } from '../msc/CustomHook'
 
 const Showpage = () => {
     const {id} = useParams()
-    const [{show, isLoad, prob}, dispatch] = useReducer(reducer, initialState)
+    const {show, isLoad, prob} = useShow(id)
     
-    useEffect(() => {
-        let isMounted = true;
-        getApi(`/shows/${id}?embed[]=seasons&embed[]=cast`).then(res => {
-            if(isMounted){
-                dispatch({type: 'SUCESS_FETCH', show: res})
-            }
-        }).catch(err => {
-            if(isMounted){
-                dispatch({type: 'FAILED_FETCH', error: err.message})
-            }
-        })
-        return () => {
-            isMounted = false;
-        }
-    }, [id])
-
     if(isLoad){
         return <div>Getting Data</div>
     }
