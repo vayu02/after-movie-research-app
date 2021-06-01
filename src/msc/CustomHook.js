@@ -8,7 +8,6 @@ function showReducer(prevState, action ){
         case 'REMOVE':{
             return prevState.filter((showId)=> showId !== action.showId)
         }
-
         default: return prevState;
     }
 }
@@ -19,9 +18,7 @@ function usePersistedReducer(reducer, initialState, key){
     })
 
     useEffect(()=>{
-        localStorage.setItem(key).JSON.stringify(state)
-    },[state, key])
-
+        localStorage.setItem(key, JSON.stringify(state))}, [state, key])
     return [state, dispatch]
 }
 
